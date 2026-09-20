@@ -1,0 +1,314 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #18181b;
+            --text-muted: #71717a;
+            --accent-color: #3b82f6;
+            --border-color: #e4e4e7;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #09090b;
+            --text-color: #fafafa;
+            --text-muted: #a1a1aa;
+            --border-color: #27272a;
+            --accent-color: #60a5fa;
+        }
+        html {
+          overscroll-behavior: none !important;
+          overscroll-behavior-y: none !important;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            -webkit-font-smoothing: antialiased;
+            overscroll-behavior: none !important;
+            overscroll-behavior-y: none !important;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+          outline: none;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-left: 1.5rem;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem; /* Disesuaikan agar pas dengan sosmed di bawahnya */
+        }
+
+        /* --- Tambahan styling agar sosmed rapi --- */
+        .hero-socials {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+            column-gap: 1rem;
+            row-gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .hero-socials a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hero-socials a:hover {
+            color: var(--text-color);
+        }
+        /* ---------------------------------------- */
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        
+
+        .experience-meta {
+            font-size: 0.9rem;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 0.2rem;
+        }
+
+        .company-name {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .bullet {
+            color: var(--text-muted);
+            margin: 0 6px;
+            font-size: 0.8rem;
+        }
+
+        .duration {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .experience-desc {
+            margin: 0;
+            padding-left: 1.2rem;
+            font-size: 0.95rem !important; /* Memaksa ukuran font agar lebih pas untuk paragraf panjang */
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .experience-desc-list {
+          margin: 0;
+          padding-left: 1rem;
+          font-size: 0.9rem !important;
+          color: var(--text-muted);
+          line-height: 1.6;
+        }
+
+        .experience-desc-list li {
+          margin-bottom: 0.3rem;
+          padding-left: 0.2rem;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+/* --- EDUCATION TIMELINE --- */
+.education-section {
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.education-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.timeline-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--text-muted);
+    margin-top: 0.45rem; /* Sejajar sama baris pertama teks */
+    flex-shrink: 0;
+}
+
+.timeline-line {
+    width: 2px;
+    background-color: var(--border-color);
+    flex-grow: 1; /* Garisnya akan memanjang otomatis mengisi ruang kosong */
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Hilangkan garis vertikal pada item paling terakhir */
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+.timeline-content {
+    padding-bottom: 2rem; /* Jarak antar riwayat pendidikan */
+}
+
+.timeline-item:last-child .timeline-content {
+    padding-bottom: 0;
+}
+
+.timeline-content h4 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.timeline-content .year {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    font-weight: 500;
+}
+/* -------------------------- */
+
+        @media (max-width: 600px) {
+        .container {
+        padding: 1.5rem 1.5rem;
+        }
+            nav {
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            .theme-toggle {
+                margin-left: 6rem;
+            }
+            .hero-socials {
+            margin-bottom: 0.5rem;
+            }
+            .section-title {
+            margin-top: 2rem;
+            }
+            footer {
+            padding-top: 1.5rem;
+            }
+        }
+
+/* --- SKILLS BADGES --- */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.skill-badge {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+}
