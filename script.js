@@ -2,9 +2,9 @@ const portfolioData = {
     bio: "Halo! Saya ...",
   navLinks: [
         { text: '<i class="fa-solid fa-house"></i>', url: "#" },
-        { text: "Experience", url: "#experience" },
-        { text: "Skills", url: "#skills" },
-    { text: "Blog", url: "#blog"}
+        { text: "Experience", url: "experience" },
+        { text: "Skills", url: "skills" },
+    { text: "Blog", url: "blog"}
     ],
     
 };
